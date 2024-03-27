@@ -12,7 +12,7 @@ public class FerragnezParty {
         String userName = scan.nextLine();
         boolean inList = false;
         for(int i = 0; i < guestsList.length; i++) {
-            if(guestsList[i].equals(userName)){
+            if(guestsList[i].equalsIgnoreCase(userName)){
                 inList = true;
                 break;
             }
