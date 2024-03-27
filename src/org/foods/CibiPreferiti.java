@@ -1,7 +1,5 @@
 package org.foods;
 
-import java.util.Arrays;
-
 public class CibiPreferiti {
     public static void main(String[] args) {
         String[] favouriteFoods = {"Cannelloni","Pizza","Timballo","Cozze","Hamburger","Sushi","Pinza"};
