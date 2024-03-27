@@ -14,16 +14,24 @@ public class CalcolaBiglietto {
 
         // chiedi quanti chilometri deve percorrere
         System.out.print("How many kilometers you have to travel: ");
-        double km = scan.nextDouble();
-        System.out.println(km);
+        double kmToTravel = scan.nextDouble();
+        System.out.println(kmToTravel);
 
         // chiedi l' età dell' utente
         System.out.print("How old are you: ");
         int age = scan.nextInt();
         System.out.println(age);
 
+        //calcolare prezzo biglietto
+        double priceTicket = priceKm * kmToTravel;
 
-
+        //utilizzo cast perchè sto facendo calcolo con 2 interi
+        if(age < 18) {
+            priceTicket = priceTicket - (priceTicket*((double) underAgeDiscount / 100));
+        } else if (age > 65) {
+            priceTicket = priceTicket - (priceTicket*((double) seniorDiscount / 100));
+        }
+        System.out.println("Ticket price : " + priceTicket + "€");
 
         scan.close();
     }
